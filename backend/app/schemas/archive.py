@@ -120,7 +120,7 @@ class ArchiveResponse(BaseModel):
     # BamDude-dispatched prints; NULL for external prints.
     source_content_hash: str | None = None
     # JSON array of patch identifiers applied before upload (v1: informational).
-    applied_patches: list[str] | None = None
+    applied_patches: list[str | dict] | None = None
     # Effective hash for dedup queries: source_content_hash or content_hash.
     # Computed at response time in the route; frontend groups by this.
     effective_hash: str | None = None

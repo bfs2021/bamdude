@@ -128,7 +128,7 @@ _ARCHIVE_MEDIA_READ = Depends(
 )
 
 
-def _parse_applied_patches(raw: str | None) -> list[str] | None:
+def _parse_applied_patches(raw: str | None) -> list[str | dict] | None:
     """Decode the ``applied_patches`` TEXT column into a list for response."""
     if not raw:
         return None
